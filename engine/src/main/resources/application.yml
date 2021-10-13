@@ -12,25 +12,5 @@ spring:
     url: r2dbc:h2:file:///~/db/ruleDb
     username: sa
     password:
-#  cloud:
-#    function:
-#      definition: getEvent
-#    stream:
-#      schema-registry-client:
-#        endpoint: http://localhost:8081
-#      bindings:
-#        getEvent-in-0:
-#          consumer:
-#            useNativeDecoding: true
-#          destination: events
-#          contentType: application/*+avro
-#      kafka:
-#        bindings:
-#          getEvent-in-0:
-#            consumer:
-#              configuration:
-#                key.deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
-#                value.deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
-#                schema.registry.url: http://localhost:8081
-#                specific.avro.reader: true
+
 

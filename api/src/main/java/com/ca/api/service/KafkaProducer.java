@@ -9,5 +9,4 @@ import java.util.concurrent.BlockingQueue;
 
 public interface KafkaProducer {
      void addQueue(EventDTO event) throws IOException;
-    BlockingQueue<Events> getQueue();
 }

@@ -18,15 +18,11 @@ import java.util.concurrent.LinkedBlockingQueue;
 @Service
 public class KafkaProducerServiceImpl implements KafkaProducer {
 
-    private final StreamBridge streamBridge;
-    private BlockingQueue<Events> eventsQueue;
     private final KafkaTemplate<String, GenericRecord> kafkaTemplate;
 
 
-    public KafkaProducerServiceImpl(StreamBridge streamBridge, KafkaTemplate<String, GenericRecord> kafkaTemplate) {
-        this.streamBridge = streamBridge;
+    public KafkaProducerServiceImpl(KafkaTemplate<String, GenericRecord> kafkaTemplate) {
         this.kafkaTemplate = kafkaTemplate;
-        this.eventsQueue =  new LinkedBlockingQueue<>();
     }
 
     @Override
@@ -41,13 +37,6 @@ public class KafkaProducerServiceImpl implements KafkaProducer {
                 .build();
 
         kafkaTemplate.send("events", events);
-
-//        eventsQueue.offer(events);
         }
-
-    @Override
-    public BlockingQueue<Events> getQueue() {
-        return eventsQueue;
-    }
 
 }
