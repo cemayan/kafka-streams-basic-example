@@ -1,0 +1,3 @@
+INSERT INTO RULES(RULE_NAME, EVENT_NAME, CONFIG) VALUES('Rule 0001','MARKET_OPENED','{"aggregatorMethod":0,"condition":2,"conditionValue":1,"timeSelector":1}');
+INSERT INTO RULES(RULE_NAME, EVENT_NAME, CONFIG) VALUES('Rule 0002','GEM_PURCHASED','{"aggregatorMethod":0,"condition":2,"conditionValue":10,"timeSelector":1}');
+INSERT INTO RULES_MANAGEMENT(RULE1, RULE2, LOGIC_OPERATOR,TIME_SELECTOR,TIME_VALUE, STATUS) VALUES(1,2,'AND','MINUTE',1,true);

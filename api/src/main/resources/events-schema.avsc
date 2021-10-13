@@ -1,0 +1,35 @@
+{
+	"type": "record",
+	"name": "Events",
+	"namespace": "com.ca.api.schema",
+	"fields": [
+	{
+		"name": "id",
+		"type": "string"
+	},
+    {
+        "name": "userId",
+        "type": "string"
+    },
+    {
+      "name": "eventName",
+      "type": {
+        "name": "EventName",
+        "type": "enum",
+        "symbols" : ["MARKET_OPENED","GEM_PURCHASED"]
+      }
+    },
+    {
+        "name" : "eventDate",
+        "type" :  "long"
+     },
+      {
+          "name" : "eventData",
+          "type" : {
+                "name": "EventData",
+                "type": "map",
+                "values" : "string"
+          }
+       }
+	]
+}

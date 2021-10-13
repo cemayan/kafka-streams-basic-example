@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api
+#  cloud:
+#    function:
+#      definition: sendEvent
+#    stream:
+#      schema-registry-client:
+#        endpoint: http://localhost:8081
+#      bindings:
+#        sendEvent-out-0:
+#          producer:
+#            useNativeDecoding: true
+#          destination: events
+#          contentType: application/*+avro
+#      kafka:
+#        bindings:
+#          sendEvent-out-0:
+#            producer:
+#              configuration:
+#                value.serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+#                schema.registry.url: http://localhost:8081
