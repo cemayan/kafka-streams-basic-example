@@ -2,6 +2,8 @@
 
 ### Introduction
 
+![kafka-logo.png](image/kafka-logo.png)
+
 This app has two components.
 - API
 - Engine
